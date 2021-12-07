@@ -13,21 +13,17 @@ public class Transaction implements TransactionInterface{
 
 	/**
 	 *
-	 * @param bank
-	 *            The bank where the account is housed.
-	 * @param accountNumber
-	 *            The customer's account number.
-	 * @param attemptedPin
-	 *            The PIN entered by the customer.
-	 * @throws Exception
-	 *             Account validation failed.
+	 * @param bank The bank where the account is housed.
+	 * @param accountNumber The customer's account number.
+	 * @param attemptedPin  The PIN entered by the customer.
+	 * @throws Exception Account validation failed.
 	 */
 	public Transaction(Bank bank, Long accountNumber, int attemptedPin) throws Exception {
 		if(bank.authenticateUser(accountNumber,attemptedPin)){
 			this.bank = bank;
 			this.accountNumber = accountNumber;
 		}else {
-			throw new Exception("");
+			throw new Exception("Provide PIN not  verified.");
 		}
 	}
 
