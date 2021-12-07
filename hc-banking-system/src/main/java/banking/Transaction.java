@@ -7,6 +7,7 @@ package banking;
  * {@link #bank}: Bank<br>
  */
 public class Transaction implements TransactionInterface{
+
 	private Long accountNumber;
 	private Bank bank;
 
@@ -28,8 +29,6 @@ public class Transaction implements TransactionInterface{
 		}else {
 			throw new Exception("");
 		}
-
-
 	}
 
 	public double getBalance() {

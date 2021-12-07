@@ -14,39 +14,43 @@ public class Bank implements BankInterface {
 		accounts = new LinkedHashMap();
 	}
 
-	private static long accNo = 1L;
+	private static long accNo = 10000L;
 
 	private Account getAccount(Long accountNumber) {
 	    return accounts.get(accountNumber);
 	}
 
+	private long generateAccountNumber(){
+		return Bank.accNo++;
+	}
+
 	public Long openCommercialAccount(Company company, int pin, double startingDeposit) {
-		long accountNo = Bank.accNo++;
+		long accountNo = generateAccountNumber();
 		Account ca = new CommercialAccount(company,accountNo,pin,startingDeposit);
 		accounts.put(accountNo,ca);
 		return accountNo;
 	}
 
 	public Long openConsumerAccount(Person person, int pin, double startingDeposit) {
-		long accountNo = Bank.accNo++;
+		long accountNo = generateAccountNumber();
 		Account pa = new ConsumerAccount(person,accountNo,pin,startingDeposit);
 		accounts.put(accountNo,pa);
         return accountNo;
 	}
 
 	public boolean authenticateUser(Long accountNumber, int pin) {
-		return accounts.get(accountNumber).validatePin(pin);
+		return getAccount(accountNumber).validatePin(pin);
 	}
 
 	public double getBalance(Long accountNumber) {
-		return accounts.get(accountNumber).getBalance();
+		return getAccount(accountNumber).getBalance();
 	}
 
 	public void credit(Long accountNumber, double amount) {
-		accounts.get(accountNumber).creditAccount(amount);
+		getAccount(accountNumber).creditAccount(amount);
 	}
 
 	public boolean debit(Long accountNumber, double amount) {
-		return accounts.get(accountNumber).debitAccount(amount);
+		return getAccount(accountNumber).debitAccount(amount);
 	}
 }
