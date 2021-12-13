@@ -3,7 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/hc-banking-system/hc-banking-system.iml" filepath="$PROJECT_DIR$/hc-banking-system/hc-banking-system.iml" />
-      <module fileurl="file://$PROJECT_DIR$/java-programms/java-programms.iml" filepath="$PROJECT_DIR$/java-programms/java-programms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hc-java-programms/hc-java-programms.iml" filepath="$PROJECT_DIR$/hc-java-programms/hc-java-programms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hc-springboot-app/hc-springboot-app.iml" filepath="$PROJECT_DIR$/hc-springboot-app/hc-springboot-app.iml" />
     </modules>
   </component>
 </project>

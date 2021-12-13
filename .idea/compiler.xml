@@ -7,10 +7,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="hc-banking-system" />
+        <module name="hc-springboot-app" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="hc-banking-system" target="1.8" />
+      <module name="hc-springboot-app" target="8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="hc-springboot-app" options="-parameters" />
+    </option>
   </component>
 </project>

@@ -4,6 +4,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/hc-banking-system/pom.xml" />
+        <option value="$PROJECT_DIR$/hc-springboot-app/pom.xml" />
       </list>
     </option>
   </component>
