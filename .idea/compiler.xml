@@ -12,7 +12,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="hc-banking-system" target="1.8" />
-      <module name="hc-springboot-app" target="8" />
+      <module name="hc-springboot-app" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
