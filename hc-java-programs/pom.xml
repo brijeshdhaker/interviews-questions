@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>interviews-questions</groupId>
-    <artifactId>hc-banking-system</artifactId>
+    <artifactId>hc-java-programs</artifactId>
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
 
-    <name>hc-banking-system</name>
+    <name>hc-java-programs</name>
 
     <url>http://maven.apache.org</url>
 

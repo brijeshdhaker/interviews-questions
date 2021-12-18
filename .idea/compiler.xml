@@ -8,11 +8,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="hc-banking-system" />
         <module name="hc-springboot-app" />
+        <module name="hc-java-programs" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="hc-banking-system" target="1.8" />
-      <module name="hc-springboot-app" target="1.8" />
+      <module name="hc-java-programs" target="1.8" />
+      <module name="hc-springboot-app" target="8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

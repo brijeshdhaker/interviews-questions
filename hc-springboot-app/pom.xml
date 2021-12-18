@@ -11,7 +11,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>com.hackerrank.sample</groupId>
+    <groupId>interviews-questions</groupId>
     <artifactId>hc-springboot-app</artifactId>
     <version>1.0-SNAPSHOT</version>
 
