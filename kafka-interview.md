@@ -15,4 +15,8 @@ Answer :It is Pulled from the broker by Consumer.Because It if it is Pushed by B
 
 #### 4. Is it Possible to Read data from kafka topic from fixed offset using command line ?
 
-Answer : Yes it is possible , Depending on partitions of topic ,we will have different offset. To read date from fixed offset use below command. 
+Answer : Yes it is possible , Depending on partitions of topic ,we will have different offset. To read date from fixed offset use below command.
+Just change the m and n as per your requirement  –partition m –offset n
+```commandline
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic sampleTopic1 --property print.key=true --partition 0 --offset 12
+```
