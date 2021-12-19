@@ -6,15 +6,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="hc-database-system" />
         <module name="hc-banking-system" />
-        <module name="hc-springboot-app" />
         <module name="hc-java-programs" />
+        <module name="hc-springboot-app" />
+        <module name="hc-python-programs" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="hc-banking-system" target="1.8" />
+      <module name="hc-database-system" target="8" />
       <module name="hc-java-programs" target="1.8" />
+      <module name="hc-python-programs" target="8" />
       <module name="hc-springboot-app" target="8" />
+      <module name="interviews-questions" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

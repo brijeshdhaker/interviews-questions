@@ -25,8 +25,7 @@ select * from (
 #
 #### Find the nth highest salary in Oracle using RANK
 #
+
 select * FROM (
-select EmployeeID, Salary,rank() over (order by Salary DESC) ranking
-from Employee
-)
-WHERE ranking = N;
+    select EmployeeID, Salary,rank() over (order by Salary DESC) ranking
+from Employee ) WHERE ranking = N;
