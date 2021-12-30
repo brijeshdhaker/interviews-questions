@@ -51,3 +51,10 @@ Provide team resources.
 #
 #### Who do you learn best from?
 #
+
+
+#
+# How to manage hard discussion with team & conflict of interest ..?
+#
+
+

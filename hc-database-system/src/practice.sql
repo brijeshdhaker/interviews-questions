@@ -28,4 +28,5 @@ select * from (
 
 select * FROM (
     select EmployeeID, Salary,rank() over (order by Salary DESC) ranking
-from Employee ) WHERE ranking = N;
+    from Employee
+) WHERE ranking = N;

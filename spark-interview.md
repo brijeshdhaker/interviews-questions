@@ -70,7 +70,17 @@ Answer : we can use zipWithIndex function
 var myrdd_windx = myrdd.zipWithIndex()
 ```
 
-#### 
+#### Q4. What is Spark Streaming?
+Apache Spark Streaming is a scalable fault-tolerant streaming processing system that natively supports both batch and streaming workloads. Spark Streaming is an extension of the core Spark API that allows data engineers and data scientists to process real-time data from various sources including (but not limited to) Kafka, Flume, and Amazon Kinesis.
+
+Four Major Aspects of Spark Streaming
+Fast recovery from failures and stragglers
+Better load balancing and resource usage
+Combining of streaming data with static datasets and interactive queries
+Native integration with advanced processing libraries (SQL, machine learning, graph processing)
+
+![](images/Apache-Spark-Streaming-ecosystem-diagram.png)
+
 
 #### 
 #### 
