@@ -1,3 +1,21 @@
+### Differences between RabbitMQ and Kafka
+
+```commandline
++———------———-------+——---——-----——-----——-----——-------——----——-----——-----——-----——------——-----——-----——------------+——-----——-------——----——-----——-----——-----——------——-----——-----——------------——-----——----+
+|  #                |  e_id                                                                                            |                                                                                            |
++———------———-------+——---——-----——-----——-----——-------——----——-----——-----——-----——------——-----——-----——------------+——-----——-------——----——-----——-----——-----——------——-----——-----——------------——-----——----+
+|  Origion          |  Apache Open Source                                                                              | Linked In                                                                                  |
+|  Design           |  Smart broker / dumb consumer model,                                                             | Kafka employs a dumb broker and uses smart consumers                                       |
+|  Message handling |  removes messages as soon as the messages are consumed and acknowledged                          | Kafka retains messages based on the retention time set on the topic                        |
+|  Volume           |  Fast with low volume in the queues become slowly as the volume goes up.                         | Kakfa is designed to store and stream huge volume of data with very little overhead        |
+|  Performance      |  around 20,000 messages per second                                                               | 100,000 messages per second.                                                               |
+|  Scaling          |  Vertically scaled by adding more power to machines                                              | Kafka can be horizontally scaled – by adding more machines                                 |
+|  Monitoring       |  inbuilt monitoring tools for queues, connections, exchanges and user permissions.               | Vendors : Confluent, Datadog                                                               |
+|  Routing rules    |  supports complex routing rules and keeps tracks of message states – consumed, acknowledged etc. | Kafka takes a simple routing approach                                                      |
++———------+——-------+——---——-----——-----——-----——-------——----——-----——-----——-----——------——-----——-----——------------+——-----——-------——----——-----——-----——-----——------——-----——-----——------------——-----——----+
+```
+
+
 #### 1. What is the Retention Period in Kafka Topic ?
    Answer :  Kafka events or Messages older than retention period will not be available for Consumer to Consume. Because it gets deleted. Kafka Retain the data only for retention period. Let;s say if Retention period is 7 days, Then You cannot get the data older than 7 days.
 
@@ -42,3 +60,7 @@ Key differences:
 8. ActiveMQ is traditional messaging system where as Kakfa is meant for distributed processing system with huge amount of data and effective for stream processing
 
 Due to above efficiencies, Kafka throughput is more than normal messaging systems like ActiveMQ and RabbitMQ.
+
+####
+kafka-configs --zookeeper <zkhost>:2181 --describe --entity-type topics --entity-name <topic name>
+kafka-configs.sh --zookeeper <zkhost>:2181 --entity-type topics --alter --entity-name <topic name> --add-config retention.ms=10000
