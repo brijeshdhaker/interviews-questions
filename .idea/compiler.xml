@@ -9,8 +9,8 @@
         <module name="hc-database-system" />
         <module name="hc-banking-system" />
         <module name="hc-java-programs" />
-        <module name="hc-springboot-app" />
         <module name="hc-python-programs" />
+        <module name="hc-springboot-app" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
